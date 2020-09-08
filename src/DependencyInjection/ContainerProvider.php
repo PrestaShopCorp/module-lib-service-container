@@ -20,7 +20,6 @@
 
 namespace PrestaShop\ModuleLibServiceContainer\DependencyInjection;
 
-
 use PrestaShop\ModuleLibServiceContainer\Cache\CacheDirectory;
 use Symfony\Component\Config\ConfigCache;
 use Symfony\Component\Config\FileLocator;
