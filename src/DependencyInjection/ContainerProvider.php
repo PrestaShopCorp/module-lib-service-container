@@ -20,7 +20,7 @@
 
 namespace PrestaShop\ModuleLibServiceContainer\DependencyInjection;
 
-use PrestaShop\ModuleLibServiceContainer\Cache\CacheDirectory;
+use PrestaShop\ModuleLibCacheDirectoryProvider\Cache\CacheDirectoryProvider;
 use Symfony\Component\Config\ConfigCache;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -41,16 +41,16 @@ class ContainerProvider
     private $moduleLocalPath;
 
     /**
-     * @var CacheDirectory
+     * @var CacheDirectoryProvider
      */
     private $cacheDirectory;
 
     /**
      * @param string $moduleName
      * @param string $moduleLocalPath
-     * @param CacheDirectory $cacheDirectory
+     * @param CacheDirectoryProvider $cacheDirectory
      */
-    public function __construct($moduleName, $moduleLocalPath, CacheDirectory $cacheDirectory)
+    public function __construct($moduleName, $moduleLocalPath, CacheDirectoryProvider $cacheDirectory)
     {
         $this->moduleName = $moduleName;
         $this->moduleLocalPath = $moduleLocalPath;

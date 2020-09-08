@@ -20,7 +20,7 @@
 
 namespace PrestaShop\ModuleLibServiceContainer\DependencyInjection;
 
-use PrestaShop\ModuleLibServiceContainer\Cache\CacheDirectory;
+use PrestaShop\ModuleLibCacheDirectoryProvider\Cache\CacheDirectoryProvider;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class ServiceContainer
@@ -69,7 +69,7 @@ class ServiceContainer
      */
     private function initContainer()
     {
-        $cacheDirectory = new CacheDirectory(
+        $cacheDirectory = new CacheDirectoryProvider(
             _PS_VERSION_,
             _PS_ROOT_DIR_,
             _PS_MODE_DEV_
