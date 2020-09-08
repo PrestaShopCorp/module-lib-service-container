@@ -1,6 +1,6 @@
 # PrestaShop Service Container for Modules
 
-This repository includes the service container from Symfony that you can used in your PrestaShop Module.
+This repository includes the service container from Symfony that you can use in your PrestaShop Module.
 
 ## Pre-requisites
 
