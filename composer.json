@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Prestashop\\ModuleLibServiceContainer\\": "src/"
+            "PrestaShop\\ModuleLibServiceContainer\\": "src/"
         }
     },
     "autoload-dev": {
