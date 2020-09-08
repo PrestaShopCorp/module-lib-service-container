@@ -28,7 +28,7 @@ To use this library, it's simple :
 ```
 $this->serviceContainer = new ServiceContainer($this->name, $this->getLocalPath());
 ```
-- Optionally, you can add a new function on your root module PHP file, like getService, to retrieve your service name in the new service container :
+- You can add a new function on your root module PHP file, like getService, to retrieve your service name in the new service container :
 ```
     /**
      * @param string $serviceName
@@ -51,10 +51,10 @@ We split the services in two folders in the config : /front and /admin folders. 
             services.yml
         common.yml
 ```
-- Of course, you can include a common file, with common services that are used in front and admin project by an import in the services.yml file :
+- Of course, you can include a common file, with common services that are use in front and admin project by an import in the services.yml file :
 ```
 imports:
   - { resource: ../common.yml }
 ```
-Now you can add your services in the services.yml like you were in a symfony project ;)
+Now you can add your services in the services.yml like you were in a Symfony project ;)
 
