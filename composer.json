@@ -2,7 +2,7 @@
     "name": "prestashop/module-lib-service-container",
     "description": "Service container to use on prestashop modules",
     "keywords": ["prestashop", "modules", "composer", "package"],
-    "license": "AFL",
+    "license": "AFL-3.0",
     "authors": [
         {
             "name": "PrestaShop SA",
