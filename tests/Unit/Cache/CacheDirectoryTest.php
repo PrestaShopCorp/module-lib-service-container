@@ -17,10 +17,7 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  */
-
 namespace Tests\Unit\Cache;
-
-require __DIR__ . "/../../../src/Cache/CacheDirectory.php";
 
 use PHPUnit\Framework\TestCase;
 use PrestaShop\ModuleLibServiceContainer\Cache\CacheDirectory;
