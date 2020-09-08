@@ -1,0 +1,36 @@
+{
+    "name": "prestashop/module-lib-service-container",
+    "description": "Service container to use on prestashop modules",
+    "keywords": ["prestashop", "modules", "composer", "package"],
+    "license": "AFL",
+    "authors": [
+        {
+            "name": "PrestaShop SA",
+            "email": "contact@prestashop.com"
+        }
+    ],
+    "type": "project",
+    "config": {
+        "platform": {
+            "php": "5.6.0"
+        }
+    },
+    "require": {
+        "php": ">=5.6.0",
+        "symfony/config": "^3.4",
+        "symfony/dependency-injection": "^3.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Prestashop\\ModuleLibServiceContainer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
