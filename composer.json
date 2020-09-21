@@ -9,7 +9,7 @@
             "email": "contact@prestashop.com"
         }
     ],
-    "type": "project",
+    "type": "library",
     "config": {
         "platform": {
             "php": "5.6.0"
