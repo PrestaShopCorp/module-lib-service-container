@@ -20,7 +20,8 @@
         "symfony/config": "^3.4",
         "symfony/dependency-injection": "^3.4",
         "prestashop/module-lib-cache-directory-provider": "^1.0",
-        "symfony/expression-language": "^3.4"
+        "symfony/expression-language": "^3.4",
+        "symfony/yaml": "^3.4"
     },
     "require-dev": {
         "phpunit/phpunit": "~5.7"
