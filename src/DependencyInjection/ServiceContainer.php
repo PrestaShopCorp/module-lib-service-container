@@ -76,6 +76,6 @@ class ServiceContainer
         );
         $containerProvider = new ContainerProvider($this->moduleName, $this->moduleLocalPath, $cacheDirectory);
 
-        $this->container = $containerProvider->get(defined('_PS_ADMIN_DIR_') || defined('PS_INSTALLATION_IN_PROGRESS') ? 'admin' : 'front');
+        $this->container = $containerProvider->get(defined('_PS_ADMIN_DIR_') || defined('PS_INSTALLATION_IN_PROGRESS') || PHP_SAPI === 'cli' ? 'admin' : 'front');
     }
 }
