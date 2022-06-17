@@ -66,13 +66,15 @@ class ServiceContainer
 
     /**
      * Instantiate a new ContainerProvider
+     *
+     * @return void
      */
     private function initContainer()
     {
         $cacheDirectory = new CacheDirectoryProvider(
-            _PS_VERSION_,
-            _PS_ROOT_DIR_,
-            _PS_MODE_DEV_
+            constant('_PS_VERSION_'),
+            constant('_PS_ROOT_DIR_'),
+            constant('_PS_MODE_DEV_')
         );
         $containerProvider = new ContainerProvider($this->moduleName, $this->moduleLocalPath, $cacheDirectory);
 

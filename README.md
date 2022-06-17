@@ -8,11 +8,18 @@ You should install this library only on a PrestaShop environment and with PHP 5.
 
 ## Installation
 
-```
+```bash
+# PrestaShop 1.7+
 composer require prestashop/module-lib-service-container
+
+# PrestaShop 1.6
+composer require prestashop/module-lib-service-container
+composer require symfony/config:^3.4 symfony/dependency-injection:^3.4 symfony/expression-language:^3.4 symfony/yaml:^3.4
+
 ```
 
 When this project is successfully added to your dependencies, you can add the new ServiceContainer to your module and use it.
+PrestaShop runs with Symfony components from version 1.7, so dependancies are not required anymore here. I you plan to run your module on PrestaShop, Symfony dependencies must be required separately.
 
 ## Usage
 
@@ -40,7 +47,8 @@ $this->serviceContainer = new ServiceContainer($this->name, $this->getLocalPath(
         return $this->serviceContainer->getService($serviceName);
     }
 ```
-- Then, you have to declare your service in the services.yml file. You must declare your services in the config/ folder.
+- Then, you have to declare your service in the services.yml file. You must declare your services in the config/ folder. From Symfony 4, services must be explicitely declared as public to be loaded with the method `getService()`;
+
 We split the services in two folders in the config : /front and /admin folders. So the tree should be like :
 ```
 /mymodule
@@ -57,4 +65,3 @@ imports:
   - { resource: ../common.yml }
 ```
 Now you can add your services in the services.yml like you were in a Symfony project ;)
-

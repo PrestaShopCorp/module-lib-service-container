@@ -69,7 +69,7 @@ class ContainerProvider
             . 'Container'
         ;
         $containerFilePath = $this->cacheDirectory->getPath() . '/' . $containerClassName . '.php';
-        $containerConfigCache = new ConfigCache($containerFilePath, _PS_MODE_DEV_);
+        $containerConfigCache = new ConfigCache($containerFilePath, constant('_PS_MODE_DEV_'));
 
         if ($containerConfigCache->isFresh()) {
             require_once $containerFilePath;
