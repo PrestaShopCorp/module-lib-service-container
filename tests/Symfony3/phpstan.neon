@@ -1,0 +1,15 @@
+parameters:
+	paths:
+		- ../../src
+	excludePaths:
+		- ../../src/Symfony4
+	bootstrapFiles:
+		- vendor/autoload.php
+		- ../../vendor/autoload.php
+	reportUnmatchedIgnoredErrors: false
+	dynamicConstantNames:
+		- _PS_VERSION_
+		- _PS_ROOT_DIR_
+		- _PS_MODE_DEV_
+
+	level: 6
